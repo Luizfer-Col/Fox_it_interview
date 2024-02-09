@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# React Native
+android/build/
+ios/build/
+android/app/build/
+*.log
+*.iml
+/ios/Pods/
+/ios/Podfile.lock
+/ios/Pods/Manifest.lock
+AppNews/android/app/build
+
+
+# Gradle
+/android/.gradle/
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
