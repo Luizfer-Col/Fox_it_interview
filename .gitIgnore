@@ -15,6 +15,7 @@ android/app/build/
 /ios/Podfile.lock
 /ios/Pods/Manifest.lock
 AppNews/android/app/build
+AppNews/android/.gradle
 
 
 # Gradle
@@ -25,3 +26,14 @@ AppNews/android/app/build
 
 # VSCode
 .vscode/
+
+.gitIgnore
+AppNews/android/.gradle/file-system.probe
+AppNews/android/.gradle/8.3/dependencies-accessors/dependencies-accessors.lock
+AppNews/android/.gradle/8.3/executionHistory/executionHistory.bin
+AppNews/android/.gradle/8.3/executionHistory/executionHistory.lock
+AppNews/android/.gradle/8.3/fileHashes/fileHashes.bin
+AppNews/android/.gradle/8.3/fileHashes/fileHashes.lock
+AppNews/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+AppNews/android/.gradle/buildOutputCleanup/outputFiles.bin
+AppNews/android/.gradle/buildOutputCleanup/outputFiles.bin
