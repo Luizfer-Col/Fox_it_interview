@@ -1,22 +1,32 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Linking, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {NewsProps} from '../types';
 import {formatDate} from '../utils';
+import FastImage from 'react-native-fast-image';
 
 const NewsItem = ({itemNews}: {itemNews: NewsProps}) => {
   const {description, publishedAt, title, urlToImage, url} = itemNews;
   const date = formatDate(publishedAt);
-  const type = 'TECNOLOGY';
+
+  const handleOpenUrl = async (url: string) => {
+    if (await Linking.canOpenURL(url)) {
+      await Linking.openURL(url);
+    } else {
+      console.error('No se puede abrir la URL:', url);
+    }
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image
-          source={{uri: urlToImage}}
+        <FastImage
           style={styles.image}
-          resizeMode="cover"
+          source={{
+            uri: urlToImage,
+            priority: FastImage.priority.normal,
+          }}
+          resizeMode={FastImage.resizeMode.cover}
         />
-        <Text style={styles.typeLabel}>{type}</Text>
       </View>
 
       <View style={styles.textContainer}>
@@ -26,7 +36,7 @@ const NewsItem = ({itemNews}: {itemNews: NewsProps}) => {
         </Text>
         <View style={styles.bottom}>
           <Text style={styles.textDate}>{date}</Text>
-          <TouchableOpacity onPress={() => console.log('url')}>
+          <TouchableOpacity onPress={() => handleOpenUrl(url)}>
             <Text style={styles.readMoreText}>Read More</Text>
           </TouchableOpacity>
         </View>
@@ -54,19 +64,8 @@ const styles = StyleSheet.create({
   image: {
     borderRadius: 8,
     flex: 1,
-    position: 'absolute',
     width: '100%',
     height: '100%',
-  },
-  typeLabel: {
-    backgroundColor: 'black',
-    padding: 3,
-    fontSize: 10,
-    fontWeight: 'bold',
-    borderRadius: 4,
-    alignSelf: 'flex-end',
-    top: 6,
-    right: 6,
   },
   textContainer: {
     flex: 3,

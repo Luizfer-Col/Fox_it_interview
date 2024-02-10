@@ -5,25 +5,16 @@
  * @format
  */
 
-import React, {useEffect, useState} from 'react';
-import type {PropsWithChildren} from 'react';
-import {SafeAreaView, Text, View, useColorScheme} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import React from 'react';
+import {View} from 'react-native';
 import NewsList from './src/components/NewsList';
-import {mockNewsData, mockNewsDataa} from './src/mockData';
-import {NewsProps} from './src/types';
+import Header from './src/components/Header';
 
 function App(): React.JSX.Element {
-  const [news, setNews] = useState<NewsProps[]>([]);
-
-  useEffect(() => {
-    setNews(mockNewsData.articles);
-  }, []);
-
   return (
-    <View style={{backgroundColor: 'blue', flex: 1}}>
-      <NewsList news={news} />
+    <View style={{flex: 1}}>
+      <Header />
+      <NewsList />
     </View>
   );
 }
