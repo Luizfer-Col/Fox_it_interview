@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {NewsProps} from './types';
-const apiKey = '53b00e98bf9d4ff79841fdefd6d526d3';
+const apiKey = 'a485782908e6444286613119e1fac76e';
 
 export const fetchNews = async (
   page: number,
