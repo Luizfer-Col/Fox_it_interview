@@ -1,0 +1,32 @@
+.appContainer {
+  justify-content: space-between;
+  background-color: rgb(243, 243, 243);
+  width: 920px;
+  margin: auto;
+  height: 100vh;
+}
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(225, 225, 225);
+  justify-content: space-around;
+  height: 100%;
+}
+
+.taskListContainer {
+  flex: 3;
+  padding: 15px;
+
+  background-color: rgb(239, 245, 255);
+}
+.formContainer {
+  flex: 2;
+  align-self: center;
+  padding: 15px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 8px;
+}

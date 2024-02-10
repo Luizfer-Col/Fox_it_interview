@@ -1,0 +1,56 @@
+.taskForm {
+  margin-bottom: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #4caf50; */
+}
+
+.inputField {
+  font-size: smaller;
+  font-weight: 300;
+  border-radius: 8px;
+  margin-block: 4px;
+  padding: 8px;
+  border-width: 1px;
+  box-shadow: none;
+  border-style: solid;
+  width: 100%;
+  margin-inline: 8px;
+}
+.requiredField {
+  border-color: red;
+  border-style: solid;
+}
+
+.buttonsContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 2px;
+  width: 100%;
+}
+
+.addButton {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cancelButton {
+  padding: 8px 16px;
+  background-color: #fa4f2d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.textWarning {
+  font-size: small;
+  color: #fa4f2d;
+}
