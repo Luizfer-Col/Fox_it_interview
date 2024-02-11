@@ -25,6 +25,10 @@ La aplicación de noticias en React Native permite a los usuarios ver las últim
 3. Ejecuta `npm install` para instalar las dependencias.
 4. Ejecuta `npx react-native run-android` o `npx react-native run-ios` para iniciar la aplicación.
 
+**Aplicación Móvil (APK):**
+
+Se incluye un archivo  [APK](`/newsapp.apk`) para probar la aplicación móvil en dispositivos Android.
+
 ---
 
 ### Proyecto 2: Aplicación de Tareas en ReactJS
@@ -51,8 +55,6 @@ La aplicación de tareas en ReactJS es una aplicación CRUD simple para gestiona
 
 ---
 
-**Aplicación Móvil (APK):**
 
-Se incluye un archivo  [APK](`/newsapp.apk`) para probar la aplicación móvil en dispositivos Android.
 
 
